@@ -1,0 +1,7 @@
+public class VehicleOrderBatchScheduler implements Schedulable {
+    public void execute(SchedulableContext sc) {
+        // Run your batch here
+        VehicleOrderBatch batch = new VehicleOrderBatch();
+        Database.executeBatch(batch);
+    }
+}

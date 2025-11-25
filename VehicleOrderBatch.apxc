@@ -1,0 +1,11 @@
+public class VehicleOrderBatch implements Database.Batchable<sObject> {
+    public Database.QueryLocator start(Database.BatchableContext bc) {
+        return Database.getQueryLocator('SELECT Id FROM Vehicle_Order__c');
+    }
+    public void execute(Database.BatchableContext bc, List<sObject> scope) {
+        // logic here
+    }
+    public void finish(Database.BatchableContext bc) {
+        // optional
+    }
+}
